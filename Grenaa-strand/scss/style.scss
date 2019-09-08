@@ -1,3 +1,14 @@
+$theme-colors: (
+  "secondary": #5C7791,
+  "info": #87A0B1,
+);
+
+//Egne farver
+$col-bluegrey: #203A55;
+
+$navbar-light-color:                rgba($col-bluegrey, .5);
+$navbar-light-hover-color:          rgba($col-bluegrey, .7);
+$navbar-light-active-color:         rgba($col-bluegrey, .9);
 
 
 
@@ -5,4 +16,18 @@
 // Dine ændringer skal være før bootstrap importen
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-$('body').scrollspy({ target: '#navbar-example2' })
+h2{
+  color: $col-bluegrey;
+  font-weight: bold;
+}
+
+h3{
+  color: lighten( $col-bluegrey, 10% );
+  font-size: 25px;
+}
+
+// VARIABLES
+
+/*// Fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$font-main: "Roboto", serif;*/
