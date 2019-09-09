@@ -1,3 +1,5 @@
+/* Color */
+
 $theme-colors: (
   "secondary": #5C7791,
   "info": #87A0B1,
@@ -5,16 +7,32 @@ $theme-colors: (
 
 //Egne farver
 $col-bluegrey: #203A55;
+$col-yellow: #F8D02B;
 
+/* Navbar-link */
 $navbar-light-color:                rgba($col-bluegrey, .5);
 $navbar-light-hover-color:          rgba($col-bluegrey, .7);
 $navbar-light-active-color:         rgba($col-bluegrey, .9);
 
 
-
-// Option A: Include all of Bootstrap
 // Dine ændringer skal være før bootstrap importen
+// Option A: Include all of Bootstrap
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$font-header: "Roboto", serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-header;
+}
 
 h2{
   color: $col-bluegrey;
@@ -26,8 +44,11 @@ h3{
   font-size: 25px;
 }
 
-// VARIABLES
+/* Mixins */
 
-/*// Fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-$font-main: "Roboto", serif;*/
+.btn {
+  border: 2px solid $col-yellow;
+  @include hover {
+    border-width: 4px;
+  }
+}
